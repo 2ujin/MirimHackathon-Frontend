@@ -12,7 +12,7 @@ const MainWrapper = styled.div`
   width: 70%;
   height: 100vh;
   padding: 20px 40px;
-  margin-top: 10px;
+  margin-top: 5px;
 `;
 
 function Home() {

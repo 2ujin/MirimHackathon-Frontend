@@ -30,11 +30,10 @@ const Id = styled.div`
   font-weight: 500;
   line-height: 24px;
   margin-top: 7px;
-  color: #57606a;
+  color: ${(props) => props.theme.textGray};
 `;
 
 const Button = styled.button`
-  color: #24292f;
   width: 100%;
   border-radius: 6px;
   border: 1px solid;
@@ -44,7 +43,6 @@ const Button = styled.button`
   line-height: 20px;
   white-space: nowrap;
   vertical-align: middle;
-  color: #24292f;
   border-color: rgb(27 31 36 / 15%);
   background-color: #f6f8fa;
   margin-top: 15px;
@@ -71,8 +69,7 @@ const Info = styled.div`
   margin-top: 18px;
   div {
     width: 100%;
-    margin-top: 8px;
-    color: #24292f;
+    margin-top: 9px;
     display: flex;
     align-items: center;
     b {

@@ -96,12 +96,10 @@ function CardItem() {
           <LangColor />
           <Text>Typescript</Text>
         </Wrap>
-
         <Wrap>
           <Icon src={`${process.env.PUBLIC_URL}/assets/icon/star.svg`} />
           <Text>5</Text>
         </Wrap>
-
         <Wrap>
           <Icon src={`${process.env.PUBLIC_URL}/assets/icon/fork.svg`} />
           <Text>3</Text>

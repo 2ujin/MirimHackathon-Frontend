@@ -7,7 +7,8 @@ const Wrapper = styled.div`
   div {
     display: flex;
     align-items: center;
-    padding: 6px 30px;
+    padding: 8px 25px;
+    font-weight: 500;
   }
 
   .select {
