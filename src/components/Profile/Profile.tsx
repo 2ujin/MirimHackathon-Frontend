@@ -84,20 +84,19 @@ const Icon = styled.img`
   margin-right: 8px;
 `;
 
-function Profile() {
+function Profile({ user }: any) {
   return (
     <ProfileWrapper>
-      <ProfileImg
-        src={`${process.env.PUBLIC_URL}/assets/profile.jpeg`}
-      ></ProfileImg>
+      <ProfileImg src={user?.avatar_url}></ProfileImg>
       <ProfileName>
-        <Name>YOUJIN LEE</Name>
-        <Id>2ujin</Id>
+        <Name>{user?.name}</Name>
+        <Id>{user?.login}</Id>
       </ProfileName>
       <Button>Edit profile</Button>
       <Follow>
         <Icon src={`${process.env.PUBLIC_URL}/assets/icon/follow.svg`}></Icon>
-        <b>64&nbsp;</b> followers ·&nbsp;<b>52&nbsp;</b> following ·
+        <b>{user?.followers}&nbsp;</b> followers ·&nbsp;
+        <b>{user?.following}&nbsp;</b> following ·
         <Icon
           style={{ marginLeft: "10px" }}
           src={`${process.env.PUBLIC_URL}/assets/icon/star.svg`}
@@ -105,24 +104,30 @@ function Profile() {
         <b>70</b>
       </Follow>
       <Info>
-        <div>
-          <Icon
-            src={`${process.env.PUBLIC_URL}/assets/icon/company.svg`}
-          ></Icon>
-          <b>@giftistar</b>
-        </div>
+        {user?.company && (
+          <div>
+            <Icon
+              src={`${process.env.PUBLIC_URL}/assets/icon/company.svg`}
+            ></Icon>
+            <b>{user?.company}</b>
+          </div>
+        )}
 
-        <div>
-          <Icon
-            src={`${process.env.PUBLIC_URL}/assets/icon/location.svg`}
-          ></Icon>
-          Seoul, Republic of Korea
-        </div>
+        {user?.location && (
+          <div>
+            <Icon
+              src={`${process.env.PUBLIC_URL}/assets/icon/location.svg`}
+            ></Icon>
+            {user?.location}
+          </div>
+        )}
 
-        <div>
-          <Icon src={`${process.env.PUBLIC_URL}/assets/icon/mail.svg`}></Icon>
-          suddenlydisappear200@gmail.com
-        </div>
+        {user?.email && (
+          <div>
+            <Icon src={`${process.env.PUBLIC_URL}/assets/icon/mail.svg`}></Icon>
+            {user?.email}
+          </div>
+        )}
       </Info>
     </ProfileWrapper>
   );
