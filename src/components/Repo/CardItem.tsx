@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   border: 1px solid #d0d7de;
   border-radius: 6px;
-  width: 46%;
+  width: 49%;
   height: 150px;
   margin: 5px;
   display: flex;
@@ -35,6 +35,7 @@ const Title = styled.span`
   margin-left: 7px;
   color: #0969da;
   font-weight: bold;
+  font-size: 17px;
 `;
 
 const Badge = styled.div`
@@ -42,7 +43,7 @@ const Badge = styled.div`
   font-size: 13px;
   border: 1px solid #d0d7de;
   border-radius: 2em;
-  color: #57606a;
+  color: ${(props) => props.theme.textGray};
   font-weight: 700;
   text-align: center;
   margin-right: 15px;
@@ -52,8 +53,9 @@ const TopWrapper = styled.div``;
 const CardDesc = styled.div`
   width: 100%;
   text-align: left;
-  margin-top: 10px;
-  color: #57606a;
+  margin-top: 13px;
+  color: ${(props) => props.theme.textGray};
+  font-size: 15px;
 `;
 
 const LangColor = styled.div`
@@ -64,7 +66,7 @@ const LangColor = styled.div`
 `;
 
 const Text = styled.span`
-  color: #57606a;
+  color: ${(props) => props.theme.textGray};
   margin-left: 3px;
 `;
 const Wrap = styled.div`

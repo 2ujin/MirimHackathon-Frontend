@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 const RepoTop = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 25px;
   align-items: center;
   h2 {
     font-size: 20px;
@@ -22,6 +22,7 @@ const RepoWrapper = styled.div`
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 15px;
 `;
 
 function Repo() {

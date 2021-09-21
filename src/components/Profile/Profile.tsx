@@ -27,10 +27,10 @@ const Name = styled.div`
 const Id = styled.div`
   font-size: 20px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 24px;
-  color: #596069;
   margin-top: 7px;
+  color: #57606a;
 `;
 
 const Button = styled.button`
@@ -68,7 +68,7 @@ const Info = styled.div`
   align-items: center;
   width: 100%;
   text-align: left;
-  margin-top: 15px;
+  margin-top: 18px;
   div {
     width: 100%;
     margin-top: 8px;
