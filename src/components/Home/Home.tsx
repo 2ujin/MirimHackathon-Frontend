@@ -58,7 +58,7 @@ function Home() {
   }, []);
   return (
     <Wrapper>
-      <Top />
+      <Top user={user} />
       <MainWrapper>
         <Profile user={user} />
         <Repo repo={repo} />
