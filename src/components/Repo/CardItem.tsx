@@ -75,47 +75,44 @@ const Wrap = styled.div`
   margin-right: 20px;
 `;
 
-export interface IRepo {
-  repo?: {
-    repo_idx: number;
-    repo_name: string;
-    repo_desc: string;
-    repo_lang_color: string;
-    repo_lang: string;
-    repo_stars: number;
-    repo_forked: number;
-  };
-}
+const LanguageColor: any = {
+  JavaScript: "#f1e05a",
+  TypeScript: "#2b7489",
+  php: "#4f5d95",
+  HTML: "#e34c25",
+  default: "#999999",
+};
 
-function CardItem({ repo }: IRepo) {
-  console.log(repo);
+function CardItem({ repo }: any) {
   return (
     <Wrapper>
       <TopWrapper>
         <CardTop>
           <div>
             <Icon src={`${process.env.PUBLIC_URL}/assets/icon/repo.svg`} />
-            <Title>{repo?.repo_name}</Title>
+            <Title>{repo?.name}</Title>
           </div>
           <div>
             <Badge>Public</Badge>
             <Icon src={`${process.env.PUBLIC_URL}/assets/icon/grabbee.svg`} />
           </div>
         </CardTop>
-        <CardDesc>{repo?.repo_desc}</CardDesc>
+        <CardDesc>{repo?.description}</CardDesc>
       </TopWrapper>
       <CardBottom>
-        <Wrap>
-          <LangColor color={repo?.repo_lang_color} />
-          <Text>{repo?.repo_lang}</Text>
-        </Wrap>
+        {repo?.language && (
+          <Wrap>
+            <LangColor color={LanguageColor[repo?.language]} />
+            <Text>{repo?.language}</Text>
+          </Wrap>
+        )}
         <Wrap>
           <Icon src={`${process.env.PUBLIC_URL}/assets/icon/star.svg`} />
-          <Text>{repo?.repo_stars}</Text>
+          <Text>{repo?.stargazers_count}</Text>
         </Wrap>
         <Wrap>
           <Icon src={`${process.env.PUBLIC_URL}/assets/icon/fork.svg`} />
-          <Text>{repo?.repo_forked}</Text>
+          <Text>{repo?.forks}</Text>
         </Wrap>
       </CardBottom>
     </Wrapper>

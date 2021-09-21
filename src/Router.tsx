@@ -5,7 +5,7 @@ function Router() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/:user_name" component={Home} />
       </Switch>
     </BrowserRouter>
   );
