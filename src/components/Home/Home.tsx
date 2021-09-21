@@ -20,12 +20,16 @@ const MainWrapper = styled.div`
 
 function Home() {
   const params: any = useParams();
-  const [user, setUsers] = useState(null);
+  const [user, setUsers]: any = useState(null);
   const [repo, serRepos] = useState(null);
+
+  // 없는 경우 디폴트 값 설정
+  if (!params.user_name) {
+    params.user_name = "2ujin";
+  }
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log(process.env.GITHUB_TOKEN);
       try {
         // .env 파일에 관리해야합니다
         const octokit = new Octokit({
