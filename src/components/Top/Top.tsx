@@ -83,7 +83,7 @@ const Noti = styled.div`
   border-radius: 50%;
 `;
 
-function Top() {
+function Top({ user }: any) {
   return (
     <TopWrapper>
       <LeftWrapper>
@@ -102,9 +102,7 @@ function Top() {
           <Noti></Noti>
         </Alarm>
         <Icon src={`${process.env.PUBLIC_URL}/assets/icon/plus.svg`}></Icon>
-        <ProfileImg
-          src={`${process.env.PUBLIC_URL}/assets/profile.jpeg`}
-        ></ProfileImg>
+        <ProfileImg src={user?.avatar_url}></ProfileImg>
       </RightWrapper>
     </TopWrapper>
   );
