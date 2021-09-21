@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const TopWrapper = styled.div`
   height: 80px;
-  background-color: #24292f;
+  background-color: ${(props) => props.theme.darkGray};
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@ const Search = styled.input`
   width: 350px;
   height: 40px;
   padding: 0 20px;
-  background-color: #24292f;
+  background-color: ${(props) => props.theme.darkGray};
   border: 1px solid #626a75;
   border-radius: 10px;
   font-size: 16px;

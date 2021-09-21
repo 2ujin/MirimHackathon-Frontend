@@ -5,6 +5,7 @@ const ProfileWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 20px;
 `;
 
 const ProfileImg = styled.img`
@@ -26,14 +27,13 @@ const Name = styled.div`
 const Id = styled.div`
   font-size: 20px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 24px;
-  color: #596069;
   margin-top: 7px;
+  color: ${(props) => props.theme.textGray};
 `;
 
 const Button = styled.button`
-  color: #24292f;
   width: 100%;
   border-radius: 6px;
   border: 1px solid;
@@ -43,7 +43,6 @@ const Button = styled.button`
   line-height: 20px;
   white-space: nowrap;
   vertical-align: middle;
-  color: #24292f;
   border-color: rgb(27 31 36 / 15%);
   background-color: #f6f8fa;
   margin-top: 15px;
@@ -67,11 +66,10 @@ const Info = styled.div`
   align-items: center;
   width: 100%;
   text-align: left;
-  margin-top: 15px;
+  margin-top: 18px;
   div {
     width: 100%;
-    margin-top: 8px;
-    color: #24292f;
+    margin-top: 9px;
     display: flex;
     align-items: center;
     b {
