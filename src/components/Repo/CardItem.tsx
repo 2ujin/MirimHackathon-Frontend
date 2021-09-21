@@ -62,7 +62,7 @@ const LangColor = styled.div`
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  background-color: #2b7489;
+  background-color: ${(props) => props.color};
 `;
 
 const Text = styled.span`
@@ -75,34 +75,47 @@ const Wrap = styled.div`
   margin-right: 20px;
 `;
 
-function CardItem() {
+export interface IRepo {
+  repo?: {
+    repo_idx: number;
+    repo_name: string;
+    repo_desc: string;
+    repo_lang_color: string;
+    repo_lang: string;
+    repo_stars: number;
+    repo_forked: number;
+  };
+}
+
+function CardItem({ repo }: IRepo) {
+  console.log(repo);
   return (
     <Wrapper>
       <TopWrapper>
         <CardTop>
           <div>
             <Icon src={`${process.env.PUBLIC_URL}/assets/icon/repo.svg`} />
-            <Title>HBDD</Title>
+            <Title>{repo?.repo_name}</Title>
           </div>
           <div>
             <Badge>Public</Badge>
             <Icon src={`${process.env.PUBLIC_URL}/assets/icon/grabbee.svg`} />
           </div>
         </CardTop>
-        <CardDesc>생일축하 🎂</CardDesc>
+        <CardDesc>{repo?.repo_desc}</CardDesc>
       </TopWrapper>
       <CardBottom>
         <Wrap>
-          <LangColor />
-          <Text>Typescript</Text>
+          <LangColor color={repo?.repo_lang_color} />
+          <Text>{repo?.repo_lang}</Text>
         </Wrap>
         <Wrap>
           <Icon src={`${process.env.PUBLIC_URL}/assets/icon/star.svg`} />
-          <Text>5</Text>
+          <Text>{repo?.repo_stars}</Text>
         </Wrap>
         <Wrap>
           <Icon src={`${process.env.PUBLIC_URL}/assets/icon/fork.svg`} />
-          <Text>3</Text>
+          <Text>{repo?.repo_forked}</Text>
         </Wrap>
       </CardBottom>
     </Wrapper>
