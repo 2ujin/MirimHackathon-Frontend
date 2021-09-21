@@ -9,9 +9,10 @@ const Wrapper = styled.div`
 `;
 const MainWrapper = styled.div`
   display: inline-flex;
-  width: 80%;
+  width: 70%;
   height: 100vh;
   padding: 20px 40px;
+  margin-top: 20px;
 `;
 
 function Home() {

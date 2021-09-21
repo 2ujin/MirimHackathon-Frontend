@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import CardItem from "./CardItem";
 import Tap from "./Tap";
 
 const Wrapper = styled.div`
-  flex: 4;
+  flex: 3.5;
   padding: 10px 50px;
 `;
 
@@ -16,6 +17,13 @@ const RepoTop = styled.div`
   }
 `;
 
+const RepoWrapper = styled.div`
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
 function Repo() {
   return (
     <Wrapper>
@@ -24,6 +32,14 @@ function Repo() {
         <h2>Pinned</h2>
         <span>Customize your pins</span>
       </RepoTop>
+      <RepoWrapper>
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+      </RepoWrapper>
     </Wrapper>
   );
 }

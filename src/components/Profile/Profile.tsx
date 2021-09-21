@@ -5,6 +5,7 @@ const ProfileWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 20px;
 `;
 
 const ProfileImg = styled.img`
