@@ -33,7 +33,7 @@ function Home() {
       try {
         // .env 파일에 관리해야합니다
         const octokit = new Octokit({
-          auth: process.env.GITHUB_TOKEN,
+          auth: process.env.TOKEN,
         });
 
         const _user: any = await octokit.request("GET /users/{username}", {
