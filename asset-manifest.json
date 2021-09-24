@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/MirimHackathon-Frontend/static/css/main.a617e044.chunk.css",
+    "main.js": "/MirimHackathon-Frontend/static/js/main.be910191.chunk.js",
+    "main.js.map": "/MirimHackathon-Frontend/static/js/main.be910191.chunk.js.map",
+    "runtime-main.js": "/MirimHackathon-Frontend/static/js/runtime-main.42374534.js",
+    "runtime-main.js.map": "/MirimHackathon-Frontend/static/js/runtime-main.42374534.js.map",
+    "static/js/2.4fe9a4f7.chunk.js": "/MirimHackathon-Frontend/static/js/2.4fe9a4f7.chunk.js",
+    "static/js/2.4fe9a4f7.chunk.js.map": "/MirimHackathon-Frontend/static/js/2.4fe9a4f7.chunk.js.map",
+    "static/js/3.ff76cb93.chunk.js": "/MirimHackathon-Frontend/static/js/3.ff76cb93.chunk.js",
+    "static/js/3.ff76cb93.chunk.js.map": "/MirimHackathon-Frontend/static/js/3.ff76cb93.chunk.js.map",
+    "index.html": "/MirimHackathon-Frontend/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/MirimHackathon-Frontend/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.4fe9a4f7.chunk.js.LICENSE.txt": "/MirimHackathon-Frontend/static/js/2.4fe9a4f7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42374534.js",
+    "static/js/2.4fe9a4f7.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.be910191.chunk.js"
+  ]
+}
